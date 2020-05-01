@@ -2,6 +2,8 @@
 
 A repository of [OPAM][opam] packages for [BER MetaOCaml][metaocaml].
 
+![GitHub Actions status](https://github.com/metaocaml/metaocaml-opam/workflows/MetaOCaml/badge.svg)
+
 ### Setting up
 
 ```

@@ -1,0 +1,21 @@
+name: MetaOCaml
+on: [push, pull_request]
+jobs:
+  install:
+    name: Install
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      fail-fast: false
+      matrix:
+        ocaml-version: [ '4.07.1+BER' ]
+        operating-system: [macos-latest, ubuntu-latest]
+    steps:
+    - uses: actions/checkout@master
+    - uses: avsm/setup-ocaml@v1.0
+      with:
+        ocaml-version: ${{ matrix.ocaml-version }}
+    - name: Deps
+      run: |
+        opam remote add metaocaml .
+        opam install --yes ocamlfind
+        opam install --yes `ls packages`
