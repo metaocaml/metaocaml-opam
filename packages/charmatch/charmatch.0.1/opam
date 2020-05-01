@@ -1,0 +1,25 @@
+opam-version: "2.0"
+name: "charmatch"
+synopsis: "Pattern-matching generation for characters"
+version: "0.1"
+maintainer: "yallop@gmail.com"
+authors: ["Jeremy Yallop <yallop@gmail.com>"]
+homepage: "https://github.com/yallop/metaocaml-charmatch"
+dev-repo: "git+https://github.com/yallop/metaocaml-charmatch.git"
+bug-reports: "https://github.com/yallop/metaocaml-charmatch/issues"
+license: "MIT"
+build: [[make]]
+build-test: [[make "test" "bench"]]
+install: [[make "install"]]
+remove: [["ocamlfind" "remove" "charmatch"]]
+depends: [
+   "ocamlfind"  {build}
+   "ocamlbuild" {build}
+   "ocaml"
+   "ocaml-variants"
+     {= "4.07.1+BER" | = "4.04.0+BER" }
+]
+url {
+  src: "https://github.com/yallop/metaocaml-charmatch/archive/0.1.tar.gz"
+  checksum: "md5=90f6dab458895c4280f105f31b1d6f85"
+}
