@@ -1,0 +1,31 @@
+opam-version: "2.0"
+name: "staged-streams"
+synopsis: "Stream fusion, to completeness"
+version: "dev"
+authors: [
+  "Oleg Kiselyov"
+  "Aggelos Biboudis"
+  "Nick Palladinos"
+  "Yannis Smaragdakis"
+]
+maintainer: "oleg@okmij.org"
+homepage: "https://strymonas.github.io/"
+dev-repo: "git+https://github.com/strymonas/staged-streams.ocaml.git"
+bug-reports: "https://github.com/strymonas/staged-streams.ocaml/issues"
+build: [
+  [make "all"]
+]
+install:[make "install"]
+remove: ["ocamlfind" "remove" "staged-streams"]
+depends: [
+   "batteries" {test & = "2.3.0"}
+   "oml" {build}
+   "ocamlfind" {build}
+   "oasis" {build}
+   "ounit" {build}
+   "base-metaocaml-ocamlfind"
+]
+url {
+  src: "https://github.com/yallop/staged-streams.ocaml/tarball/4a0a6a22"
+  checksum: "md5=29199397eae88b3bc64495398e90162f"
+}
