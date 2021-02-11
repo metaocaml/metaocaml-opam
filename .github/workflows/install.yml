@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ocaml-version: [ '4.07.1+BER' ]
+        ocaml-version: [ '4.11.1+BER' ]
         operating-system: [macos-latest, ubuntu-latest]
     steps:
     - uses: actions/checkout@master
