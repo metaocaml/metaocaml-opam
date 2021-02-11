@@ -1,0 +1,31 @@
+opam-version: "2.0"
+name: "asp"
+version: "dev"
+synopsis: "Algebraic, staged parsing library"
+maintainer: "yallop@gmail.com"
+authors: ["Neel Krishnaswami <nk480@cl.cam.ac.uk>"
+          "Jeremy Yallop <yallop@gmail.com>"]
+homepage: "https://github.com/yallop/ocaml-asp"
+dev-repo: "git+https://github.com/yallop/ocaml-asp.git"
+bug-reports: "https://github.com/yallop/ocaml-asp/issues"
+license: "MIT"
+build: [[make]]
+build-test: [[make "test" "bench"]]
+install: [[make "install"]]
+remove: [["ocamlfind" "remove" "asp"]]
+depends: [
+   "ocamlfind"  {build}
+   "ocamlbuild" {build}
+
+   "letrec"
+
+   "core_bench"      {test}
+   "ounit"           {test}
+   "conf-python-2-7" {test}
+   "ocaml-variants"
+     {= "4.07.1+BER" | = "4.04.0+BER" | = "4.11.1+BER" }
+]
+url {
+  src: "https://github.com/yallop/ocaml-asp/archive/0.1.1.tar.gz"
+  checksum: "md5=1d84281e1eac40d767b65a6ccd948efc"
+}
