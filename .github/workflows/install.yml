@@ -4,6 +4,8 @@ jobs:
   install:
     name: Install
     runs-on: ${{ matrix.operating-system }}
+    env:
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
     strategy:
       fail-fast: false
       matrix:
