@@ -21,6 +21,6 @@ depends: [
 ]
 build-test: [make "test"]
 url {
-  src: "https://github.com/yallop/metaocaml-frex/archive/0.1.1.tar.gz"
+  src: "https://github.com/frex-project/metaocaml-frex/archive/0.1.1.tar.gz"
   checksum: "md5=204cc547bf3190b20b22e932d1ee383f"
 }
