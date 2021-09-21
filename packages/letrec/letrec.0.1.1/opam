@@ -18,6 +18,10 @@ depends: [
   "ocaml-variants"
     {= "4.07.1+BER" | = "4.04.0+BER" | = "4.11.1+BER" }
 ]
+patches:["check-compiler.patch"]
+extra-files: [
+ "check-compiler.patch" "md5=9963285628f3c2a0abdeb829dfae84b0"
+]
 url {
   src: "https://github.com/yallop/metaocaml-letrec/archive/0.1.1.tar.gz"
   checksum: "md5=724ae2ea7abd91f50d6e26e0cd10836a"
