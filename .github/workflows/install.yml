@@ -3,21 +3,24 @@ on: [push, pull_request]
 jobs:
   install:
     name: Install
-    runs-on: ${{ matrix.operating-system }}
+    runs-on: ${{ matrix.os }}
     env:
       ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
     strategy:
       fail-fast: false
       matrix:
-        ocaml-version: [ '4.11.1+BER' ]
-        operating-system: [macos-latest, ubuntu-latest]
+        ocaml-compiler: [ 'ocaml-variants.4.11.1+BER' ]
+        os: [macos-latest, ubuntu-latest]
     steps:
-    - uses: actions/checkout@master
-    - uses: avsm/setup-ocaml@v1.0
-      with:
-        ocaml-version: ${{ matrix.ocaml-version }}
-    - name: Deps
-      run: |
-        opam remote add metaocaml .
-        opam install --yes ocamlfind
-        opam install --yes `ls packages`
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Use OCaml ${{ matrix.ocaml-compiler }}
+        uses: ocaml/setup-ocaml@v2
+        with:
+          ocaml-compiler: ${{ matrix.ocaml-compiler }}
+      - name: Deps
+        run: |
+          opam remote add metaocaml .
+          opam install --yes ocamlfind
+          opam install --yes `ls packages`
