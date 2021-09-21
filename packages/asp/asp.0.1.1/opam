@@ -25,6 +25,10 @@ depends: [
    "ocaml-variants"
      {= "4.07.1+BER" | = "4.04.0+BER" | = "4.11.1+BER" }
 ]
+patches:["check-compiler.patch"]
+extra-files: [
+ "check-compiler.patch" "md5=68cffbee8257e73e1d9e2e40b4909aad"
+]
 url {
   src: "https://github.com/yallop/ocaml-asp/archive/0.1.1.tar.gz"
   checksum: "md5=1d84281e1eac40d767b65a6ccd948efc"

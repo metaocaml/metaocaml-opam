@@ -20,6 +20,10 @@ depends: [
      {= "4.07.1+BER" | = "4.04.0+BER" | = "4.11.1+BER" }
 ]
 build-test: [make "test"]
+patches:["check-compiler.patch"]
+extra-files: [
+ "check-compiler.patch" "md5=676594431ecd566a09ecd6f95323c453"
+]
 url {
   src: "https://github.com/frex-project/metaocaml-frex/archive/0.1.1.tar.gz"
   checksum: "md5=204cc547bf3190b20b22e932d1ee383f"

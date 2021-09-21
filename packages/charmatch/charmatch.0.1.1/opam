@@ -19,6 +19,10 @@ depends: [
    "ocaml-variants"
      {= "4.07.1+BER" | = "4.04.0+BER" | = "4.11.1+BER" }
 ]
+patches:["check-compiler.patch"]
+extra-files: [
+ "check-compiler.patch" "md5=6029d7dcc06b57880988f0c1ef14a821"
+]
 url {
   src: "https://github.com/yallop/metaocaml-charmatch/archive/0.1.1.tar.gz"
   checksum: "md5=f2e9c04f0ad4f7f5b5d9013483216b50"
