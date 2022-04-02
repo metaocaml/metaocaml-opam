@@ -19,6 +19,8 @@ jobs:
         uses: ocaml/setup-ocaml@v2
         with:
           ocaml-compiler: ${{ matrix.ocaml-compiler }}
+          dune-cache: true
+
       - name: Deps
         run: |
           opam remote add metaocaml .
