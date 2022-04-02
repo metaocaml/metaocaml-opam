@@ -1,0 +1,26 @@
+opam-version: "2.0"
+name: "reex"
+synopsis: "Regular expressions and derivatives"
+maintainer: "yallop@gmail.com"
+authors: ["Jeremy Yallop <yallop@gmail.com>"]
+homepage: "https://github.com/yallop/reex"
+dev-repo: "git+https://github.com/yallop/reex.git"
+bug-reports: "https://github.com/yallop/reex/issues"
+license: "MIT"
+build: [
+  ["dune" "subst"] {dev}
+  ["dune" "build" "-p" name "-j" jobs]
+  ["dune" "runtest" "-p" name "-j" jobs] {with-test}
+]
+depends: [
+   "ocaml"
+   "dune"
+   "ppx_deriving"
+   "charset"
+   "regenerate" {with-test}
+   "ounit" {with-test}
+]
+url {
+  src: "https://github.com/yallop/reex/archive/refs/tags/0.1.0.tar.gz"
+  checksum: "md5=4e5b0da2b199c997f8a229afdc0ce9b6"
+}
