@@ -1,7 +1,6 @@
 opam-version: "2.0"
 name: "charmatch"
 synopsis: "Pattern-matching generation for characters"
-version: "0.1"
 maintainer: "yallop@gmail.com"
 authors: ["Jeremy Yallop <yallop@gmail.com>"]
 homepage: "https://github.com/yallop/metaocaml-charmatch"

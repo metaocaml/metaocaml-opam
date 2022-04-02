@@ -1,6 +1,5 @@
 opam-version: "2.0"
 name: "frex"
-version: "dev"
 synopsis: "Partially-static data as free extension of algebras"
 maintainer: "yallop@gmail.com"
 authors: [ "Tamara von Glehn <T.L.Von-Glehn@dpmms.cam.ac.uk>"
