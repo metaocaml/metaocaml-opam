@@ -21,6 +21,8 @@ opam remote add metaocaml git+https://github.com/metaocaml/metaocaml-opam.git
   typed, algebraic, staged parser combinators
 * [charmatch](https://github.com/yallop/metaocaml-charmatch),
   for generating efficient matches over characters
+* [reex](https://github.com/yallop/reex),
+  for staged regular expression matching
 * [frex](https://github.com/frex-project/metaocaml-frex/),
   for multi-stage programming with algebras
 * [letrec](https://github.com/yallop/metaocaml-letrec),
