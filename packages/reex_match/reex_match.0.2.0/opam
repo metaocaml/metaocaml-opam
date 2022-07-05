@@ -1,0 +1,27 @@
+opam-version: "2.0"
+name: "reex_match"
+synopsis: "Regular expression matching for MetaOCaml"
+maintainer: "yallop@gmail.com"
+authors: ["Jeremy Yallop <yallop@gmail.com>"]
+homepage: "https://github.com/yallop/ocaml-reex"
+dev-repo: "git+https://github.com/yallop/ocaml-reex.git"
+bug-reports: "https://github.com/yallop/ocaml-reex/issues"
+license: "MIT"
+build: [
+  ["dune" "subst"] {dev}
+  ["dune" "build" "-p" name "-j" jobs]
+  ["dune" "runtest" "-p" name "-j" jobs] {with-test}
+]
+depends: [
+   "ocaml-variants" {= "4.11.1+BER" }
+   "dune"
+   "reex"
+   "letrec"
+   "charmatch" {>= "0.2.0"}
+   "regenerate" {with-test}
+   "ounit" {with-test}
+]
+url {
+  src: "https://github.com/yallop/ocaml-reex/archive/refs/tags/0.2.0.tar.gz"
+  checksum: "md5=663c3a77c9fa8de238a8e91a7eb3a703"
+}
