@@ -19,6 +19,8 @@ opam remote add metaocaml git+https://github.com/metaocaml/metaocaml-opam.git
 
 * [asp](https://github.com/yallop/ocaml-asp/),
   typed, algebraic, staged parser combinators
+* [flap](https://github.com/yallop/ocaml-flap),
+  a deterministic parser with fused lexing
 * [charmatch](https://github.com/yallop/metaocaml-charmatch),
   for generating efficient matches over characters
 * [reex](https://github.com/yallop/reex),
