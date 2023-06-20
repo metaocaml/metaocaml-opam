@@ -1,0 +1,27 @@
+opam-version: "2.0"
+name: "strymonas"
+synopsis: "Stream fusion, to completeness"
+authors: [
+  "Oleg Kiselyov"
+  "Tomoaki Kobayashi"
+  "Aggelos Biboudis"
+  "Nick Palladinos"
+  "Yannis Smaragdakis"
+]
+maintainer: "oleg@okmij.org"
+homepage: "https://strymonas.github.io/"
+dev-repo: "git+https://github.com/strymonas/strymonas-ocaml.git"
+bug-reports: "https://github.com/strymonas/strymonas-ocaml/issues"
+build: [
+  [make "all"]
+]
+install:[make "install"]
+remove: ["ocamlfind" "remove" "strymonas"]
+depends: [
+   "ocamlfind" {build}
+   "base-metaocaml-ocamlfind"
+]
+url {
+  src: "https://github.com/ahrefs/strymonas-ocaml/tarball/6310917f10e38a9df05af0996e71ddf5c59aabdb"
+  checksum: "md5=170064fb5a820b5b57f86ce58c422e76"
+}

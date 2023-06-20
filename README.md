@@ -8,7 +8,7 @@ A repository of [OPAM][opam] packages for [BER MetaOCaml][metaocaml].
 
 ```
 opam update
-opam switch create 4.11.1+BER 
+opam switch create 4.14.1+BER
 opam remote add metaocaml git+https://github.com/metaocaml/metaocaml-opam.git
 ```
 
@@ -30,4 +30,6 @@ opam remote add metaocaml git+https://github.com/metaocaml/metaocaml-opam.git
 * [letrec](https://github.com/yallop/metaocaml-letrec),
   for generating mutually-recursive definitions
 * [staged-streams](https://github.com/strymonas/staged-streams.ocaml),
+  for stream computations with fusion (old POPL17 design)
+* [strymonas](https://github.com/strymonas/strymonas-ocaml),
   for stream computations with fusion
