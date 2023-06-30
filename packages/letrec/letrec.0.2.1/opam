@@ -1,0 +1,28 @@
+opam-version: "2.0"
+name: "letrec"
+synopsis: "Flexible 'let rec' generation for MetaOCaml"
+maintainer: "Jeremy Yallop <yallop@gmail.com>"
+authors: "Jeremy Yallop <yallop@gmail.com>"
+homepage: "https://github.com/yallop/metaocaml-letrec"
+dev-repo: "git+https://github.com/yallop/metaocaml-letrec.git"
+bug-reports: "https://github.com/yallop/metaocaml-letrec/issues"
+license: "MIT"
+build: [[make]]
+build-test: [[make "all" "test"]]
+install: [make "install"]
+remove: ["ocamlfind" "remove" "letrec"]
+depends: [
+  "ocamlfind" {build}
+  "ocamlbuild" {build}
+  "delimcc"
+  "ocaml-variants"
+    {= "4.07.1+BER" | = "4.04.0+BER" | = "4.11.1+BER" | = "4.14.1+BER" }
+]
+patches:["check-compiler.patch"]
+extra-files: [
+ "check-compiler.patch" "md5=ece39091fc043c18490d637ae4dd466f"
+]
+url {
+  src: "https://github.com/yallop/metaocaml-letrec/archive/0.2.1.tar.gz"
+  checksum: "md5=7954a277c8461b214afa34352c3fb401"
+}
