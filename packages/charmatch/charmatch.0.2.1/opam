@@ -1,0 +1,27 @@
+opam-version: "2.0"
+name: "charmatch"
+synopsis: "Pattern-matching generation for characters"
+maintainer: "yallop@gmail.com"
+authors: ["Jeremy Yallop <yallop@gmail.com>"]
+homepage: "https://github.com/yallop/metaocaml-charmatch"
+dev-repo: "git+https://github.com/yallop/metaocaml-charmatch.git"
+bug-reports: "https://github.com/yallop/metaocaml-charmatch/issues"
+license: "MIT"
+build: [
+  ["dune" "subst"] {dev}
+  ["dune" "build" "-p" name "-j" jobs]
+  ["dune" "runtest" "-p" name "-j" jobs] {with-test}
+]
+depends: [
+   "ocaml"
+   "dune"
+   "ocamlfind"
+   "ocaml-variants"
+     {= "4.11.1+BER" | = "4.11.1+BER+flambda" | = "4.14.1+BER"}
+   "charset" {with-test}
+   "ounit2" {with-test}
+]
+url {
+  src: "https://github.com/yallop/metaocaml-charmatch/archive/0.2.1.tar.gz"
+  checksum: "md5=2cf78d3741b9b0ca503973aac51ad2c5"
+}
