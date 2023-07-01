@@ -1,24 +1,27 @@
-name: MetaOCaml
-on: [push, pull_request]
+name: Base
+on:
+ workflow_call:
+  inputs:
+      compiler:
+        required: true
+        type: string
+      os:
+        required: true
+        type: string
 jobs:
   install:
     name: Install
-    runs-on: ${{ matrix.os }}
+    runs-on: ${{ inputs.os }}
     env:
       ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
-    strategy:
-      fail-fast: false
-      matrix:
-        ocaml-compiler: [ 'ocaml-variants.4.11.1+BER', 'ocaml-variants.4.14.1+BER' ]
-        os: [macos-latest, ubuntu-latest]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Use OCaml ${{ matrix.ocaml-compiler }}
+      - name: Use OCaml ${{ inputs.compiler }}
         uses: ocaml/setup-ocaml@v2
         with:
-          ocaml-compiler: ${{ matrix.ocaml-compiler }}
+          ocaml-compiler: ${{ inputs.compiler }}
           dune-cache: true
 
       - name: Deps

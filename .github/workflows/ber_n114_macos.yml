@@ -1,0 +1,8 @@
+name: macOS N114
+on: [push, pull_request]
+jobs:
+  call-workflow-passing-data:
+    uses: ./.github/workflows/base.yml
+    with:
+      compiler: "ocaml-variants.4.14.1+BER"
+      os: "macos-latest"
