@@ -26,6 +26,6 @@ depends: [
    "base-metaocaml-ocamlfind"
 ]
 url {
-  src: "https://github.com/yallop/staged-streams.ocaml/tarball/4faa8758"
-  checksum: "md5=c16ba713fae91bd0351f79e04e20ea30"
+  src: "https://github.com/yallop/staged-streams.ocaml/tarball/52cee5f3"
+  checksum: "md5=141b0b5ba5e170004273af7007289aec"
 }
