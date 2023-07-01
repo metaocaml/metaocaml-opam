@@ -21,7 +21,7 @@ depends: [
    "ounit" {with-test}
 
   "ocaml-variants"
-    {= "4.11.1+BER" | = "4.11.1+BER+flambda"}
+    {= "4.11.1+BER" | = "4.11.1+BER+flambda" | = "4.14.1+BER"}
 ]
 url {
   src: "https://github.com/yallop/ocaml-flap/archive/refs/tags/0.1.0.tar.gz"
